@@ -1,4 +1,4 @@
-package cilc.cfp.org.revealit;
+package otg.cfp.cilc.revealit;
 
 import org.junit.Test;
 

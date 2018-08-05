@@ -1,4 +1,4 @@
-package cilc.cfp.org.gui;
+package org.cfp.cilc.revealit.gui;
 
 import android.app.Activity;
 import android.content.Context;

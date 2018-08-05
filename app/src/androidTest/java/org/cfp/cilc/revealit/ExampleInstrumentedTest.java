@@ -1,4 +1,4 @@
-package cilc.cfp.org.revealit;
+package org.cfp.cilc.revealit;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
