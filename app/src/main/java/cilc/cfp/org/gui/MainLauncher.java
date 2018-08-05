@@ -1,13 +1,13 @@
-package cilc.cfp.org.revealit;
+package cilc.cfp.org.gui;
 
-import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import cilc.cfp.org.revealit.R;
 
 public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHomeFragmentInteractionListener,ImageAnalysisFragment.OnImageFragmentInteractionListener,TextAnalysisFragment.OnTextFragmentInteractionListener {
 

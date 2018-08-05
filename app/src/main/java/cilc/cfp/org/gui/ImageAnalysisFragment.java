@@ -1,4 +1,4 @@
-package cilc.cfp.org.revealit;
+package cilc.cfp.org.gui;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import cilc.cfp.org.revealit.R;
 
 
 /**

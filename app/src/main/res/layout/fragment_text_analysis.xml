@@ -3,12 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextAnalysisFragment">
+    android:layout_marginBottom="50dp"
+    tools:context="cilc.cfp.org.gui.TextAnalysisFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_text_fragment" />
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="URL"
+        android:layout_gravity="top"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/url"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+
+
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_gravity="top"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_gravity="top"
+        android:layout_marginTop="100dp"
+         />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Body"
+        android:layout_gravity="top"
+        android:layout_marginTop="160dp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:lines="10"
+        android:layout_gravity="top"
+        android:layout_marginTop="180dp"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:background="@null"
+        />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Analyze"
+        android:id="@+id/textanButton"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dp"
+         />
 
 </FrameLayout>
