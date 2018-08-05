@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Reveal !t</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Image</string>
+    <string name="title_notifications">Article</string>
+    <string name="app_desc">Now a days off and on social media fake news consisting of dotored
+        text articles or photoshoped images have been a real issue. This app will help you navigate
+        the proverbial mine field that have become our social media feed. \n \n This will help you
+        in two ways \n \n
+
+        a) You can give it online news article to process and based it will try to categorize the
+        article with 95% accuracy based upon nlp, semantic and emotional analysis. \n \n
+
+        b) give it a image it will perform error level analysis and show you result which will hint
+        possible photoshop which you can observe by seesing changes in the contrast
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_image_fragment">Hello image fragment</string>
+    <string name="hello_text_fragment">Hello text fragment</string>
+    <string name="hello_home_fragment">Hello home fragment</string>
+</resources>
