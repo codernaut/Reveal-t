@@ -4,6 +4,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -41,6 +42,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
     private EditText body;
     private EditText title;
     private EditText url;
+    private BusyFragment busyfragment;
 
     public TextAnalysisFragment() {
         // Required empty public constructor
@@ -111,13 +113,13 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-//        FragmentManager fragmentManager = getFragmentManager();
-//        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        BusyFragment fragment = new BusyFragment();
-//        fragmentTransaction.addToBackStack("busyText");
-//        fragmentTransaction.hide(this);
-//        fragmentTransaction.add(android.R.id.content, fragment);
-//        fragmentTransaction.commit();
+        FragmentManager fragmentManager = getFragmentManager();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        busyfragment = new BusyFragment();
+        fragmentTransaction.addToBackStack("busyText");
+        fragmentTransaction.hide(this);
+        fragmentTransaction.add(android.R.id.content, busyfragment);
+        fragmentTransaction.commit();
         FakeboxAccessor accessor=new FakeboxAccessor(this);
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
@@ -125,6 +127,8 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         params.add("content",body.getText().toString());
         params.add("title",title.getText().toString());
         client.post("http://65.52.173.195:8080/fakebox/check",params,accessor);
+
+
 
     }
 
@@ -137,6 +141,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         fragment.setArguments(args);
         //fragmentTransaction.addToBackStack("busyText");
        // fragmentTransaction.hide(this);
+        fragmentTransaction.hide(busyfragment);
         fragmentTransaction.add(android.R.id.content, fragment);
         fragmentTransaction.commit();
     }
@@ -148,6 +153,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         Bundle args=new Bundle();
         args.putString("message",s);
         fragment.setArguments(args);
+        fragmentTransaction.hide(busyfragment);
         fragmentTransaction.add(android.R.id.content, fragment);
         fragmentTransaction.commit();
     }

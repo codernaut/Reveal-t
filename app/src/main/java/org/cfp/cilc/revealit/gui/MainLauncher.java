@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import cilc.cfp.org.revealit.R;
 
-public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHomeFragmentInteractionListener,ImageAnalysisFragment.OnImageFragmentInteractionListener,TextAnalysisFragment.OnTextFragmentInteractionListener,BusyFragment.OnBusyFragmentInteractionListener {
+public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHomeFragmentInteractionListener,ImageAnalysisFragment.OnImageFragmentInteractionListener,TextAnalysisFragment.OnTextFragmentInteractionListener,BusyFragment.OnBusyFragmentInteractionListener, TextResult.OnFragmentTextResultInteractionListener {
 
 
     HomeFragment homeFragment = new HomeFragment();
@@ -121,6 +121,11 @@ public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHo
 
     @Override
     public void onBusyFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onFragmentTextResultInteraction(Uri uri) {
 
     }
 }
