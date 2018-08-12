@@ -126,7 +126,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         params.add("url",url.getText().toString());
         params.add("content",body.getText().toString());
         params.add("title",title.getText().toString());
-        client.post("http://65.52.173.195:8080/fakebox/check",params,accessor);
+        client.post("xxxxxx",params,accessor);
 
 
 
