@@ -21,5 +21,5 @@
     <string name="hello_home_fragment">Hello home fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_busy_fragment">Guru Meditating: Please wait while we process and get back to you</string>
 </resources>

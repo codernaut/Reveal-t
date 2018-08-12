@@ -7,10 +7,10 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import cilc.cfp.org.gui.TextAnalysisFragment;
+
 import cilc.cfp.org.revealit.R;
 
-public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHomeFragmentInteractionListener,ImageAnalysisFragment.OnImageFragmentInteractionListener,TextAnalysisFragment.OnTextFragmentInteractionListener {
+public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHomeFragmentInteractionListener,ImageAnalysisFragment.OnImageFragmentInteractionListener,TextAnalysisFragment.OnTextFragmentInteractionListener,BusyFragment.OnBusyFragmentInteractionListener {
 
 
     HomeFragment homeFragment = new HomeFragment();
@@ -116,6 +116,11 @@ public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHo
 
     @Override
     public void onTextFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onBusyFragmentInteraction(Uri uri) {
 
     }
 }
