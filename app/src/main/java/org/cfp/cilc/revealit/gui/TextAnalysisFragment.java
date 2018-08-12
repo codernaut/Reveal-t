@@ -116,8 +116,8 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         FragmentManager fragmentManager = getFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         busyfragment = new BusyFragment();
-        fragmentTransaction.addToBackStack("busyText");
-        fragmentTransaction.hide(this);
+      /*  fragmentTransaction.addToBackStack("busyText");
+        fragmentTransaction.hide(this);*/
         fragmentTransaction.add(android.R.id.content, busyfragment);
         fragmentTransaction.commit();
         FakeboxAccessor accessor=new FakeboxAccessor(this);
@@ -142,7 +142,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         //fragmentTransaction.addToBackStack("busyText");
        // fragmentTransaction.hide(this);
         fragmentTransaction.hide(busyfragment);
-        fragmentTransaction.add(android.R.id.content, fragment);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
 
@@ -154,7 +154,7 @@ public class TextAnalysisFragment extends Fragment implements View.OnClickListen
         args.putString("message",s);
         fragment.setArguments(args);
         fragmentTransaction.hide(busyfragment);
-        fragmentTransaction.add(android.R.id.content, fragment);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
 

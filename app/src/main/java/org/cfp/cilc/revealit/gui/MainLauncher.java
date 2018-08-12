@@ -23,6 +23,7 @@ public class MainLauncher extends AppCompatActivity implements HomeFragment.OnHo
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
 
